@@ -2,13 +2,17 @@
 JSF Example (PrimeFaces) in Eclipse
 ========
 
-URL: http://localhost:8080/relproxy_ex_jsf/faces/index.xhtml
-------
-
 Description
 ------
-This example is interesting because it uses an interface with several methods implemented by the reloadable "session singleton",
-to reset the session just remove the session cookie in your browser (sure you know how to do it).
+This example is interesting because it uses an interface with several methods implemented by the reloadable "session singleton"
+(usually we register application scope singletons).
+
+To reset the session just remove the session cookie in your browser (sure you know how to do it).
+
+URL (using Tomcat on port 8080) 
+------
+
+[http://localhost:8080/relproxy_ex_jsf/faces/index.xhtml](http://localhost:8080/relproxy_ex_jsf/faces/index.xhtml "URL")
 
 
 Project creation from scratch
