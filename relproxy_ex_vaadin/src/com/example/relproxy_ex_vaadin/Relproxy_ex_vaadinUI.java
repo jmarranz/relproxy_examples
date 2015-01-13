@@ -64,13 +64,8 @@ public class Relproxy_ex_vaadinUI extends UI {
 			finally
 			{
 			    if (input != null)
-					try {
-						input.close();
-					} catch (IOException ex) {
-						throw new RuntimeException(ex);
-					}
+					try { input.close(); } catch (IOException ex) {	throw new RuntimeException(ex);	}
 			}
-
 
 		    if (inputSourcePath == null)
 		    	throw new RuntimeException("Missing inputSourcePath");
