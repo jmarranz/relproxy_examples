@@ -15,7 +15,7 @@ Project creation from scratch
 
 + Wait until wizard dialog dismisses, it seems hanged but it is just downloading dependencies, be patient 
 
-+ Disable context reloading of your project in the associated Tomcat (see the manual if necessary)!!!
++ Disable context reloading of your project in the associated Tomcat (see the RelProxy Manual if necessary)!!!
 
 + Add to /WebContent/WEB-INF/lib relproxy-x.y.z.jar
 

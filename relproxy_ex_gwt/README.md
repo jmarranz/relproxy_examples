@@ -1,8 +1,6 @@
 GWT-RPC Example in Eclipse
 ========
 
-This kind of project is documented in the manual.
+This kind of project is documented in the manual step by step.
 
-Default GWT configuration disables context reload.
-
- 
+Default GWT configuration disables automatic context reload.

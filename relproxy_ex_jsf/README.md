@@ -4,8 +4,8 @@ JSF Example (PrimeFaces) in Eclipse
 
 Description
 ------
-This example is interesting because it uses an interface with several methods implemented by the reloadable "session singleton"
-(usually we register application scope singletons).
+This example is interesting because it uses an interface with several methods implemented by the reloadable "session scope singleton"
+(usually we register "application scope singletons").
 
 To reset the session just remove the session cookie in your browser (sure you know how to do it).
 
@@ -20,19 +20,15 @@ Project creation from scratch
 
 + Follow the steps of:
 
-http://www.journaldev.com/2990/primefaces-5-jsf-2-beginners-example-tutorial
+  http://www.journaldev.com/2990/primefaces-5-jsf-2-beginners-example-tutorial
 
-+ Java Build Path => add Tomcat v7 Library
+  (Enable "Generate web.xml deployment descriptor")
 
-+ Disable context reloading of your project in the associated Tomcat (see the manual if necessary)!!!
++ If necessary addn in Project Properties / Java Build Path => add Tomcat v7 Library
+
++ Disable context reloading of your project in the associated Tomcat (see the RelProxy Manual if necessary)!!!
 
 + Add WebContent/WEB-INF/lib the RelProxy jar (relproxy-x.y.z.jar)
-
-+ How to fix: java.lang.ClassNotFoundException: javax.servlet.jsp.jstl.core.Config
-
-  Add to WebContent/WEB-INF/lib the files jsp-api-2.0.jar and jstl-1.2.jar
-  
-  http://stackoverflow.com/questions/15113628/java-lang-classnotfoundexception-javax-servlet-jsp-jstl-core-config
 
 + Add conf/JProxyServletContextListener
 
@@ -42,10 +38,9 @@ http://www.journaldev.com/2990/primefaces-5-jsf-2-beginners-example-tutorial
 	<listener-class>com.journaldev.conf.JProxyServletContextListener</listener-class>
    </listener>
 
-+ ViewEmployeesManagedBean => @ApplicationScoped instead of @SessionScoped
++ Modify ViewEmployeesManagedBean with the new code of this example.
 
-  Modify this class with the new code of this example.
++ Add to jsfBeans folder: ViewEmployeesManagedBeanDelegate and ViewEmployeesManagedBeanDelegateImpl
 
-+ Add to jsfBeans: ViewEmployeesManagedBeanDelegate and ViewEmployeesManagedBeanDelegateImpl
-
-+ Change something in 
++ Change something in ViewEmployeesManagedBeanDelegateImpl to test and reload the page, reset the session if you want to see a change
+in populateEmployeeList.
