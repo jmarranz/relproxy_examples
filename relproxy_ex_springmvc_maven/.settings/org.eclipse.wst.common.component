@@ -4,8 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-        <property name="context-root" value="relproxy_ex_springmvc_maven"/>
         <property name="java-output-path" value="/relproxy_ex_springmvc_maven/target/classes"/>
+        <property name="context-root" value="HelloWorld"/>
     </wb-module>
 </project-modules>

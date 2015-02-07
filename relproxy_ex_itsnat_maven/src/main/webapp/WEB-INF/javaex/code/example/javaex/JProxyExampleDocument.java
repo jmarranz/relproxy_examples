@@ -33,7 +33,7 @@ public class JProxyExampleDocument
         {        
             @Override
             public void handleEvent(Event evt) 
-            {
+            {           	
                 String text = textInput.getText();
                 String comment = "  YES I SAID THAT"; // " YES I SAID THAT";                
                 resultsElem.setTextContent(text + comment);
@@ -43,7 +43,6 @@ public class JProxyExampleDocument
         Element buttonElem = doc.getElementById("buttonId");
         ((EventTarget)buttonElem).addEventListener("click",listener,false);
 
-        
         this.resultsElem = doc.getElementById("resultsId");            
     }
 }

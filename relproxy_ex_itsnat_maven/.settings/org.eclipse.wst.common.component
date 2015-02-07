@@ -4,6 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/WEB-INF/javaex/code"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp/WEB-INF/groovyex/code"/>
         <property name="context-root" value="relproxy_ex_itsnat_maven"/>
         <property name="java-output-path" value="/relproxy_ex_itsnat_maven/target/classes"/>
     </wb-module>
