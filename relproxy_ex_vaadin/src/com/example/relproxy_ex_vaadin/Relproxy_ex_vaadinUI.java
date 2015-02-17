@@ -70,8 +70,13 @@ public class Relproxy_ex_vaadinUI extends UI {
 		    if (inputSourcePath == null)
 		    	throw new RuntimeException("Missing inputSourcePath");
 		    
-		    boolean developmentMode = new File(inputSourcePath).exists();
-		    boolean enabled = developmentMode; 
+	        if (!new File(inputSourcePath).exists())
+	        {
+	            System.out.println("RelProxy is disabled, detected production mode ");
+	            return;
+	        }		    
+		    
+		    boolean enabled = true; 
 		    			    
 		    
 		    JProxyInputSourceFileExcludedListener excludedListener = new JProxyInputSourceFileExcludedListener()

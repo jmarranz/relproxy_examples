@@ -38,6 +38,11 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 		ServletContext context = config.getServletContext();
 		
 	    String inputPath = context.getRealPath("/") + "/../src/";
+        if (!new File(inputPath).exists())
+        {
+            System.out.println("RelProxy is disabled, detected production mode ");
+            return;
+        }	    
 	    
 	    JProxyInputSourceFileExcludedListener excludedListener = new JProxyInputSourceFileExcludedListener()
 	    {

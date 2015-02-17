@@ -62,6 +62,11 @@ public class JProxyServletContextListener implements ServletContextListener
              
 	    inputSourcePath += "/src/main/java";
 	    
+        if (!new File(inputSourcePath).exists())
+        {
+            System.out.println("RelProxy is disabled, detected production mode ");
+            return;
+        }	    
 	    
         JProxyInputSourceFileExcludedListener excludedListener = new JProxyInputSourceFileExcludedListener()
         {
