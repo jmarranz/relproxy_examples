@@ -124,7 +124,7 @@ public class JProxyExampleServlet extends HttpServletWrapper
         docTemplate = itsNatServlet.registerItsNatDocumentTemplate("javaex","text/html", pathPrefix + "javaex.html");
 
         FalseDB db = new FalseDB();        
-        
+
         ItsNatServletRequestListener listener = JProxy.create(new example.javaex.JProxyExampleLoadListener(db), ItsNatServletRequestListener.class);
         docTemplate.addItsNatServletRequestListener(listener);   
     }    

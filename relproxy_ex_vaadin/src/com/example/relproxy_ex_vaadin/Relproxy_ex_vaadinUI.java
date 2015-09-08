@@ -46,10 +46,10 @@ public class Relproxy_ex_vaadinUI extends UI {
 								
 			ServletContext context = config.getServletContext();
 			
-		    String configPath = context.getRealPath("/") + "/WEB-INF/conf_relproxy.properties";
+		    String configPath = context.getRealPath("/") + "/WEB-INF/conf/conf_relproxy.properties";
 		    File configFile = new File(configPath);
 		    if (!configFile.exists())
-		    	throw new RuntimeException("Missing /WEB-INF/conf_relproxy.properties needed to specify input source folder for RelProxy");
+		    	throw new RuntimeException("Missing /WEB-INF/conf/conf_relproxy.properties needed to specify input source folder for RelProxy");
 		    
 		    String inputSourcePath = null;
 		    FileReader input = null;

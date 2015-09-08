@@ -27,5 +27,10 @@ Project creation from scratch
 
 + Add VaadinUIDelegate.java and VaadinUIDelegateImpl.java to the 
 
+Download dependencies (project downloaded from repository and imported in Eclipse)
+------
 
++ Install the Vaadin Plugin from Eclipse Marketplace (to ensure is Ivy supported)
+
++ Rigth click in the project and execute Ivy/Resolve to download Vaadin dependencies
 

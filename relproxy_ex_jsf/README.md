@@ -24,7 +24,7 @@ Project creation from scratch
 
   (Enable "Generate web.xml deployment descriptor")
 
-+ If necessary addn in Project Properties / Java Build Path => add Tomcat v7 Library
++ If necessary in Project Properties / Java Build Path => add Tomcat v7 Library
 
 + Disable context reloading of your project in the associated Tomcat (see the RelProxy Manual if necessary)!!!
 
@@ -37,6 +37,14 @@ Project creation from scratch
    <listener>
 	<listener-class>com.journaldev.conf.JProxyServletContextListener</listener-class>
    </listener>
+
++ Add to WebContent/WEB-INF/conf/conf_relproxy.properties  with something like:
+
+  webapp_folder=<project root>
+
+  Example: webapp_folder=/home/iamoneuser/projects/relproxy_ex_jsf
+  
+  In Windows use \\ bars
 
 + Modify ViewEmployeesManagedBean with the new code of this example.
 

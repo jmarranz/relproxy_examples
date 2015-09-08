@@ -68,6 +68,7 @@ Project creation from scratch
   webapp_folder=<project root>
 
   Example: webapp_folder=/home/iamoneuser/projects/relproxy_ex_springmvc_maven
+  
   In Windows use \\ bars
 
 + Replace HelloWorldController.java and helloworld.jsp code with code of the same files from this example.

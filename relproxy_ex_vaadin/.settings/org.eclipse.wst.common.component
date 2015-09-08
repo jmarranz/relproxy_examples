@@ -2,6 +2,7 @@
     <wb-module deploy-name="relproxy_ex_vaadin">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <property name="context-root" value="relproxy_ex_vaadin"/>
         <property name="java-output-path" value="/relproxy_ex_vaadin/build/classes"/>
     </wb-module>

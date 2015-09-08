@@ -38,7 +38,7 @@ public class JProxyServletContextListener implements ServletContextListener
         
 		ServletContext context = sce.getServletContext();
 		
-	    String configPath = context.getRealPath("/") + "/WEB-INF/conf_relproxy.properties";
+	    String configPath = context.getRealPath("/") + "/WEB-INF/conf/conf_relproxy.properties";
 	    File configFile = new File(configPath);
 	    if (!configFile.exists())
 	    	throw new RuntimeException("Missing /WEB-INF/conf_relproxy.properties needed to specify input source folder for RelProxy");
@@ -50,7 +50,7 @@ public class JProxyServletContextListener implements ServletContextListener
 			input = new FileReader(configFile.getAbsolutePath());
 		    Properties prop = new Properties();
 		    prop.load(input);
-		    inputSourcePath = prop.getProperty("inputSourcePath");
+		    inputSourcePath = prop.getProperty("webapp_folder");
 		}
 		catch (Exception ex) { throw new RuntimeException(ex); }
 		finally
@@ -60,7 +60,9 @@ public class JProxyServletContextListener implements ServletContextListener
 		}
 
 	    if (inputSourcePath == null)
-	    	throw new RuntimeException("Missing inputSourcePath"); 
+	    	throw new RuntimeException("Missing webapp_folder property");       
+             
+	    inputSourcePath += "/src"; 
 	    
         if (!new File(inputSourcePath).exists())
         {

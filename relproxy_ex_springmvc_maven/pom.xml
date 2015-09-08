@@ -11,22 +11,13 @@
 	<properties>
 		<spring.version>4.0.1.RELEASE</spring.version>
 	</properties>
+	
 	<dependencies>
 	
-	<!-- 
-	    <dependency>
-	        <groupId>com.innowhere</groupId>
-	        <artifactId>relproxy</artifactId>
-	        <version>0.8.2</version>
-	        <scope>system</scope>
-	        <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/relproxy-0.8.2.jar</systemPath>
-	    </dependency> 	
-	-->
-
 		<dependency>
 			<groupId>com.innowhere</groupId>
 			<artifactId>relproxy</artifactId>
-			<version>0.8.3</version>
+			<version>0.8.6</version>
 			<!-- <type>jar</type> -->
 		</dependency>	
 

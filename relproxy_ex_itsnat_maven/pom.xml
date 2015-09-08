@@ -41,7 +41,7 @@
     <dependency>
         <groupId>com.innowhere</groupId>
         <artifactId>relproxy</artifactId>
-        <version>0.8.3</version>
+        <version>0.8.6</version>
     </dependency>    
     
     <dependency>
@@ -95,8 +95,8 @@
 	<finalName>relproxy_ex_itsnat_maven</finalName>  
   
     <plugins>
-                
-      <!--
+             
+<!--  
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -110,13 +110,13 @@
             </goals>
             <configuration>
               <sources>
-                <source>${basedir}/../relproxy/src/main/java</source>
+                <source>${basedir}/src/main/webapp/WEB-INF/javaex/code</source>
               </sources>
             </configuration>
           </execution>
         </executions>
-      </plugin>
-              -->
+      </plugin>             
+-->  
               
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -143,10 +143,10 @@
     <resources>                          
        <resource>
          <directory>src/main/webapp/WEB-INF/groovyex/code</directory>         
-       </resource>  
+       </resource>    
        <resource>
          <directory>src/main/webapp/WEB-INF/javaex/code</directory>         
-       </resource>                     
+       </resource>                   
     </resources>    
   </build>
   

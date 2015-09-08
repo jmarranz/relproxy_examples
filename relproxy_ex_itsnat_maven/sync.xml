@@ -5,7 +5,7 @@
 	
     <target name="sync_production_src_folders">
         
-        <property name="webinf_src" value="${basedir}/WebContent/WEB-INF" />
+        <property name="webinf_src" value="${basedir}/src/main/webapp/WEB-INF" />
     	
     	<echo message="Synchronizing (alternative to Filesync plugin) to: ${webapp_target}" />
     	                   
