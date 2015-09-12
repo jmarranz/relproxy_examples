@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="sync_production_src_folders" name="relproxy_ex_itsnat">
+<project basedir="." default="sync_production_src_folders" name="relproxy_ex_itsnat_maven">
 
     <property file="conf/conf_relproxy.properties"/> <!-- defines ${webapp_target} where Eclipse builds the webapp -->
 	
-    <target name="sync_production_src_folders">
-        
-        <property name="webinf_src" value="${basedir}/src/main/webapp/WEB-INF" />
+    <target name="sync_production_src_folders">     	
     	
     	<echo message="Synchronizing (alternative to Filesync plugin) to: ${webapp_target}" />
     	                   
+        <property name="webinf_src" value="${basedir}/src/main/webapp/WEB-INF" />
+        <property name="webinf_target" value="${webapp_target}/WEB-INF" />    	
+    	
         <property name="source_java" value="${webinf_src}/javaex/code" />                
         <property name="source_groovy" value="${webinf_src}/groovyex/code" />        
-        
-        <property name="webinf_target" value="${webapp_target}/WEB-INF" />                   
+                          
         <property name="target_java" value="${webinf_target}/javaex/code" />                
         <property name="target_groovy" value="${webinf_target}/groovyex/code" />         
         
